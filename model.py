@@ -22,9 +22,9 @@ vectorizer = TfidfVectorizer(
     stop_words="english"
 )
 
-X_train = vectorizer.fit_transform(X_train)   # learn + convert 
-X_test  = vectorizer.transform(X_test)    # convert only
-vocabs = vectorizer.get_feature_names_out()  # view vocabulary
+X_train = vectorizer.fit_transform(X_train)   
+X_test  = vectorizer.transform(X_test)    
+vocabs = vectorizer.get_feature_names_out()  
 
 # STEP 4 - TRAIN
 model = LogisticRegression(max_iter=1000 , C=0.5)
